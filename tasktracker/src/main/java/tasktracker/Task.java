@@ -5,19 +5,18 @@ import java.time.LocalDateTime;
 public class Task {
 	private String id;
 	private String description;
-	private String status; // todo, in-progress, done
-	private LocalDateTime createdAt;
-	private LocalDateTime updatedAt;
+	private TaskStatus status; // todo, in-progress, done
+	private String createdAt;
+	private String updatedAt;
 
-	public Task() {
-	}
+	public Task(){}
 
-	public Task(String id, String description) {
+	public Task(String id, String description, TaskStatus status, String createdAt, String updatedAt) {
 		this.id = id;
 		this.description = description;
-		this.status = "todo";
-		this.createdAt = LocalDateTime.now();
-		this.updatedAt = LocalDateTime.now();
+		this.status = status;
+		this.createdAt = createdAt;
+		this.updatedAt = updatedAt;
 	}
 
 	public String getId() {
@@ -36,27 +35,27 @@ public class Task {
 		this.description = description;
 	}
 
-	public String getStatus() {
+	public TaskStatus getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(TaskStatus status) {
 		this.status = status;
 	}
 
-	public LocalDateTime getCreatedAt() {
+	public String getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(LocalDateTime createdAt) {
+	public void setCreatedAt(String createdAt) {
 		this.createdAt = createdAt;
 	}
 
-	public LocalDateTime getUpdatedAt() {
+	public String getUpdatedAt() {
 		return updatedAt;
 	}
 
-	public void setUpdatedAt(LocalDateTime updatedAt) {
+	public void setUpdatedAt(String updatedAt) {
 		this.updatedAt = updatedAt;
 	}
 
